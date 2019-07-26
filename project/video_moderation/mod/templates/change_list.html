@@ -1,0 +1,13 @@
+{% extends 'admin/change_form.html' %}
+
+{% block submit_buttons_bottom %}
+
+            <input type="submit" value="Process" name="_make-unique" style="margin-left: 1174px">
+
+<!--    <button style="border-radius: 12px;margin-left: 1172px;-->
+<!--    padding: 12px;-->
+<!--    background: #94c0d6; font-size: 104%;    font-family: inherit;    color: aliceblue"-->
+<!--            type="button" input type="submit" value="Make Unique" name="_make-unique">Process</button>-->
+    {{ block.super }}
+
+{% endblock %}
