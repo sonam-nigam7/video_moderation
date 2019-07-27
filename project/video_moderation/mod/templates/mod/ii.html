@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Bootstrap Carousel</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+jQuery(document).ready(function() {
+
+	jQuery('.carousel[data-type="multi"] .item').each(function(){
+		var next = jQuery(this).next();
+		if (!next.length) {
+			next = jQuery(this).siblings(':first');
+		}
+		next.children(':first-child').clone().appendTo(jQuery(this));
+
+		for (var i=0;i<2;i++) {
+			next=next.next();
+			if (!next.length) {
+				next = jQuery(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo($(this));
+		}
+	});
+
+});
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+    <title>Career Preferences Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      <style>
+      .mySlides {display:none;}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 98%;
+    margin-left: 1%;
+}
+.column {
+  float: left;
+  width: 20.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.button {
+  background-color: cadetblue /* Green */
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 43%;
+  border-radius: 12px;
+}
+</style>
+    </style>
+  </head>
+  <body>
+    <div>
+    <img src="/Users/sonam.nigam/Desktop/bb.jpg" alt="" style="width: 98%;">
+    </div>
+
+   <h3 style="margin-left: 20px;">Hotel Name</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+  <h3>Hotelier Images </h3>
+  <div class="row" style="margin-top: 63px; margin-left: 22%">
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/t_fs/the-ananta-udaipur-udaipur-presidential-suite-private-pool-162497260203-oriwebp.webp" alt="Snow" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/the-ananta-udaipur-udaipur-1468660029502jpg-112875300164-webp-fs.webp" alt="Forest" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/the-ananta-udaipur-udaipur-1468647145908jpg-112875417080-webp-fs.webp" alt="Mountains" style="width:100%">
+      </div>
+
+  </div>
+
+  <h3>Rejected Images </h3>
+  <div class="row" style="margin-top: 63px; margin-left: 22%">
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/t_fs/the-ananta-udaipur-udaipur-presidential-suite-private-pool-162497260203-oriwebp.webp" alt="Snow" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/the-ananta-udaipur-udaipur-1468660029502jpg-112875300164-webp-fs.webp" alt="Forest" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://cdn1.goibibo.com/the-ananta-udaipur-udaipur-1468647145908jpg-112875417080-webp-fs.webp" alt="Mountains" style="width:100%">
+      </div>
+  </div>
+  <button style="background: cadetblue;"class="button button4" onclick="">Take Action</button>
+  </form>
+</div>
+  <div>
+    <img src="/Users/sonam.nigam/Desktop/ab.jpg" alt="" style="width: 98%;height: 119%;margin-top: 65px;">
+  </div>
+
+  </body>
+</html>
